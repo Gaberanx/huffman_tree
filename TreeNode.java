@@ -25,7 +25,7 @@ public class TreeNode implements Comparable<TreeNode> {
     }
 
 
-    // Constructor Method for a TreeNode object that branches to two other TreeNode objects that have a character frequency, this tree node stores the sum of the two branching tree nodes and does not store a character
+    // Constructor method for a TreeNode object that branches to two other TreeNode objects that have a character frequency, this tree node stores the sum of the two branching tree nodes and does not store a character
     public TreeNode(TreeNode left, TreeNode right){
 
         // '\u0000' is the default null character for primitive char data types in Java, the character should not be referenced if a node was created with this constructor
@@ -37,13 +37,14 @@ public class TreeNode implements Comparable<TreeNode> {
     }
 
 
-    // Constructor Method for a TreeNode object that branches to two other TreeNode objects that have a character frequency,
-    // this tree node stores the sum of the two branching tree nodes and does not store a character
+    // Constructor method that accepts given left and right nodes as well as given character and frequency values, used when there is only one TreeNode object left in the priority queue in encode() method
     public TreeNode(char character, int frequency, TreeNode left, TreeNode right) {
+
         this.character = character;
         this.frequency = frequency;
         this.left = left;
         this.right = right;
+
     }
 
 

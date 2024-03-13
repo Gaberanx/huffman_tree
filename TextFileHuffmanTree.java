@@ -223,7 +223,7 @@ public class TextFileHuffmanTree {
             sumQueue.add(new TreeNode(charQueue.poll(), charQueue.poll()));
         }
 
-        // Highest frequency node
+        // Highest frequency node, made when there is only one node left in charQueue
         if (charQueue.size() == 1) {
             TreeNode left = charQueue.poll();
             sumQueue.add(new TreeNode(left.character, left.frequency, left, null));
@@ -305,7 +305,7 @@ public class TextFileHuffmanTree {
                 curr = curr.right;
             }
 
-            if (curr.character != '\u0000') {
+            if (curr.left == null && curr.right == null) {
 
                 // Adds node's character to the decodedFileContent string before repeating the process again for each binary character in the argument's string
                 decodedFileContent += curr.character;
