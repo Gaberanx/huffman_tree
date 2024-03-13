@@ -225,7 +225,8 @@ public class TextFileHuffmanTree {
 
         // Highest frequency node
         if (charQueue.size() == 1) {
-            sumQueue.add(new TreeNode(charQueue.poll(), null));
+            TreeNode left = charQueue.poll();
+            sumQueue.add(new TreeNode(left.character, left.frequency, left, null));
         }
 
         // The root of the Huffman tree

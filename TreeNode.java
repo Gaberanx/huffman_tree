@@ -37,6 +37,16 @@ public class TreeNode implements Comparable<TreeNode> {
     }
 
 
+    // Constructor Method for a TreeNode object that branches to two other TreeNode objects that have a character frequency,
+    // this tree node stores the sum of the two branching tree nodes and does not store a character
+    public TreeNode(char character, int frequency, TreeNode left, TreeNode right) {
+        this.character = character;
+        this.frequency = frequency;
+        this.left = left;
+        this.right = right;
+    }
+
+
     // For custom Comparable in TextFileHuffmanTree class so its priority queue can compare frequency values in tree nodes
     @Override
     public int compareTo(TreeNode otherNode){
